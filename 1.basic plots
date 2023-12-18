@@ -1,0 +1,40 @@
+  
+import matplotlib.pyplot as plt  
+import numpy as np
+
+
+x = np.linspace(0,10,100)
+y= np.sin(x)  
+plt.figure()
+plt.plot(x, y)  
+plt.xlabel('x - axis')  
+plt.ylabel('y - axis')  
+plt.title('line chart') 
+
+
+categories=['A','B','C','D']
+values=[20,35,30,25] 
+plt.figure()
+plt.bar(categories,values)
+plt.xlabel('x - axis')  
+plt.ylabel('y - axis')  
+plt.title('bar chart')
+
+
+x=np.random.randn(100)
+y=np.random.randn(100)
+colors=np.random.rand(100)
+sizes=100*np.random.rand(100)
+plt.figure()
+plt.scatter(x,y,c=colors,s=sizes,alpha=1)
+plt.xlabel('x - axis')  
+plt.ylabel('y - axis')  
+plt.title('scatter chart')
+
+
+sizes=[1,1,1,1,1]
+labels=['A','B','C','D','E']
+plt.figure()
+plt.pie(sizes,labels=labels,autopct='%1.1f%%')
+plt.title("pie chart")
+plt.show()
